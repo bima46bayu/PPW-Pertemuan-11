@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+
+    <script>
+        function calculate() {
+          var bottleQuantity = parseInt(document.getElementById('bottle').value);
+          var strawQuantity = parseInt(document.getElementById('straw').value);
+          var cigaretteButtQuantity = parseInt(document.getElementById('cigaretteButt').value);
+      
+          var totalQuantity = (bottleQuantity + strawQuantity + cigaretteButtQuantity) * 365;
+      
+          document.getElementById('result').innerHTML = "Total Sampah Plastik per Tahun: " + totalQuantity + " items";
+        }
+
+        function addTextField() {
+            var container = document.getElementById("section container");
+            var newTextField = document.createElement("div");
+            newTextField.className = "input-group";
+            newTextField.innerHTML = `
+            <div class="input-group">
+              <label for="bottle">Botol Plastik</label>
+              <input type="number" id="bottle" placeholder="Enter the quantity">
+            </div>
+            `;
+            container.appendChild(newTextField);
+        }
+      </script>
+      
+      <style>
+        .input-group {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+        }
+      
+        .input-group label {
+          flex: 1;
+          margin-right: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div class="sectionfive">
+        <div class="section container">
+          <h1 class="text-center">Kalkulator Sampah Plastik</h1>
+          <br>
+          <form>
+            <div class="input-group">
+              <label for="bottle">Botol Plastik</label>
+              <input type="number" id="bottle" placeholder="Enter the quantity">
+            </div>
+      
+            <div class="input-group">
+              <label for="straw">Sedotan</label>
+              <input type="number" id="straw" placeholder="Enter the quantity">
+            </div>
+      
+            <div class="input-group">
+              <label for="cigaretteButt">Putung Rokok</label>
+              <input type="number" id="cigaretteButt" placeholder="Enter the quantity">
+            </div>
+    
+            <button onclick="addTextField()" type="button" class="btn btn-primary mt-4">add it</button><br>
+      
+            <button onclick="calculate()" type="button" class="btn btn-primary mt-4">Calculate</button>
+          </form>
+      
+          <div id="result" style="margin-top: 20px;"></div>
+        </div>
+      </div>
+</body>
+</html>
+
+  
+  
