@@ -1,6 +1,6 @@
 <?php
 
-$namaPanggilan = "Darriel";
+$namaPanggilan = "Bima";
 $tanggalHariIni = date("j");
 
 if (strlen($namaPanggilan) == ($tanggalHariIni - 2)) {
@@ -14,11 +14,11 @@ if (strlen($namaPanggilan) == ($tanggalHariIni - 2)) {
 echo "\n\n";
 
 $anggotaKelompok = [
-    ["nama" => "Darriel Markerizal", "nim" => "12345"],
-    ["nama" => "Nawal Rizky Kautsar", "nim" => "23456"],
-    ["nama" => "Muhammad Farhan Nugroho", "nim" => "34567"],
-    ["nama" => "Zefanya Diego", "nim" => "45678"],
-    ["nama" => "Prasetyo Edi Pamungkas", "nim" => "56789"]
+    ["nama" => "Bima Bayu Sofana", "nim" => "12345"],
+    ["nama" => "Muhammad Hanif Sauqi", "nim" => "23456"],
+    ["nama" => "Yhodimas Geffananda", "nim" => "34567"],
+    ["nama" => "Muhammad Rizky Aziz", "nim" => "45678"],
+    ["nama" => "Robertus Dimasena ", "nim" => "56789"]
 ];
 
 foreach ($anggotaKelompok as $anggota) {
